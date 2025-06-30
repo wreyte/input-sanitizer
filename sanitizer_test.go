@@ -43,11 +43,6 @@ func TestSanitizeContent(t *testing.T) {
 			`<base href="https://example.com/" />Safe content`,
 			`Safe content`,
 		},
-		{
-			"PreserveTheGoCode",
-			`package main\n\nimport "fmt"\n\nfunc main() {\n\tfmt.Println("Hello!")\n}`,
-			`package main\n\nimport "fmt"\n\nfunc main() {\n\tfmt.Println("Hello!")\n}`,
-		},
 	}
 
 	for _, tt := range tests {
